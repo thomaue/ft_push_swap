@@ -16,7 +16,6 @@ __The Push Swap project challenges us to sort a list of integers with limited re
 
 The challenge lies in sorting the list using as few instructions as possible.
 
-Radix Sort for Lists Above 5:
 
 For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
 
