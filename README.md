@@ -3,7 +3,8 @@
 This repository contains my solution for the Push Swap project at École 42. The objective of this project is to sort a list of integers passed as a parameter in ascending order, using a limited set of instructions.
 Project Description:
 
-__The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:__
+## The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:
+
 |instructions| description :                                                   |
 |------------|-----------------------------------------------------------------|
 | sa         | swap the first two elements of the list A.                      |
@@ -18,7 +19,7 @@ __The Push Swap project challenges us to sort a list of integers with limited re
 > The challenge lies in sorting the list using as few instructions as possible.
 
 
-For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
+## For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
 
 1. Initialization: Give a first presort with a little math formula.
 2. Sort by Least Significant Digit (LSD): Start with the least significant digit and distribute the numbers into the respective buckets based on this digit.
@@ -42,7 +43,7 @@ How to Use:
 
 
 
-To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used.
+## To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used.
 Usage:
 
 Compile the program:
