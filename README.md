@@ -47,7 +47,7 @@ How to Use:
 
 ## WORKING ? 
 
-###To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used. 
+### To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used. 
 
 1. Compile the program:
 
