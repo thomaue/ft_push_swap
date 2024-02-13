@@ -4,15 +4,16 @@ This repository contains my solution for the Push Swap project at École 42. The
 Project Description:
 
 __The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:__
-
-* `sa`: swap the first two elements of the list A.
-* `sb`: swap the first two elements of the list B.
-* `ra`: rotate the list A, the first element becomes the last.
-* `rb`: rotate the list B, the first element becomes the last.
-* `rra`: reverse rotate the list A, the last element becomes the first.
-* `rrb`: reverse rotate the list B, the last element becomes the first.
-* `pa`: push the first element of list B to list A.
-* `pb`: push the first element of list A to list B.
+|instructions| description :                                                   |
+|------------|-----------------------------------------------------------------|
+| sa         | swap the first two elements of the list A.                      |
+| sb         | swap the first two elements of the list B.                      |
+| ra         | rotate the list A, the first element becomes the last.          |
+| rb         | rotate the list B, the first element becomes the last.          |
+| rra        | reverse rotate the list A, the last element becomes the first.  |
+| rrb        | reverse rotate the list B, the last element becomes the first.  |
+| pa         | push the first element of list B to list A.                     |
+| pb         | push the first element of list A to list B.                     |
 
 > The challenge lies in sorting the list using as few instructions as possible.
 
