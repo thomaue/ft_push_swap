@@ -3,7 +3,9 @@
 This repository contains my solution for the Push Swap project at École 42. The objective of this project is to sort a list of integers passed as a parameter in ascending order, using a limited set of instructions.
 Project Description:
 
-## The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:
+## THE PROJECT 
+
+### The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:
 
 |instructions| description :                                                   |
 |------------|-----------------------------------------------------------------|
@@ -18,8 +20,9 @@ Project Description:
 
 > The challenge lies in sorting the list using as few instructions as possible.
 
+## RADIX ? 
 
-## For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
+### For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
 
 1. Initialization: Give a first presort with a little math formula.
 2. Sort by Least Significant Digit (LSD): Start with the least significant digit and distribute the numbers into the respective buckets based on this digit.
@@ -39,19 +42,16 @@ For lists containing 5 or fewer elements, I utilized simpler sorting algorithms.
 By employing Radix Sort for larger lists and simpler sorting techniques for smaller lists, I aimed to optimize the sorting process while adhering to the project's constraints.
 How to Use:
 
+## WORKING ? 
 
+###To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used. 
 
-
-
-## To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used.
-Usage:
-
-Compile the program:
+1. Compile the program:
 
 ```bash
 $ make
 ```
-Run the program with a list of integers:
+2. Run the program with a list of integers:
 ```bash
 $ ./push_swap 4 2 7 1 3
 ```
