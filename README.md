@@ -14,7 +14,7 @@ __The Push Swap project challenges us to sort a list of integers with limited re
 * `pa`: push the first element of list B to list A.
 * `pb`: push the first element of list A to list B.
 
-The challenge lies in sorting the list using as few instructions as possible.
+> The challenge lies in sorting the list using as few instructions as possible.
 
 
 For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
