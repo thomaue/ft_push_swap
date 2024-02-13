@@ -3,6 +3,9 @@
 This repository contains my solution for the Push Swap project at École 42. The objective of this project is to sort a list of integers passed as a parameter in ascending order, using a limited set of instructions.
 Project Description:
 
+
+
+
 __The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:__
 
 * `sa`: swap the first two elements of the list A.
