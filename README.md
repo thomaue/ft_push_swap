@@ -37,16 +37,13 @@ Usage:
 
 Compile the program:
 
-go
-
+```bash
 $ make
-
+```
 Run the program with a list of integers:
-
-shell
-
+```bash
 $ ./push_swap 4 2 7 1 3
-
+```
 Acknowledgment:
 
 Special thanks to École 42 for providing this challenging project and the opportunity to explore different sorting algorithms under constraints.
