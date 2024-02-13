@@ -22,7 +22,9 @@ Project Description:
 
 ## RADIX ? 
 
-### For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
+> For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting.
+
+### Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
 
 1. Initialization: Give a first presort with a little math formula.
 2. Sort by Least Significant Digit (LSD): Start with the least significant digit and distribute the numbers into the respective buckets based on this digit.
@@ -34,8 +36,9 @@ Project Description:
 ### radix visualisation :
 [HERE](https://www.youtube.com/watch?v=Tmq1UkL7xeU)
 
-Radix Sort is efficient because it doesn't rely on comparison between elements, making it suitable for our limited instruction set.
-Simple Sorting for Lists of 5 or Fewer Elements:
+> Radix Sort is efficient because it doesn't rely on comparison between elements, making it suitable for our limited instruction set.
+
+### Simple Sorting for Lists of 5 or Fewer Elements:
 
 For lists containing 5 or fewer elements, I utilized simpler sorting algorithms. These algorithms, although less efficient for larger lists, are suitable for smaller sets due to their simplicity and low overhead.
 
