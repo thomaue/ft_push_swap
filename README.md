@@ -1,7 +1,6 @@
 # Push Swap
 
 This repository contains my solution for the Push Swap project at 42. The objective of this project is to sort a list of integers passed as a parameter in ascending order, using a limited set of instructions.
-Project Description:
 
 ## THE PROJECT 
 
