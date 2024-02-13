@@ -26,7 +26,7 @@ For lists containing more than 5 elements, I implemented the Radix Sort algorith
 4. Repeat: Repeat the process for the next significant digit until all digits are processed.
 
 ### radix visualisation here :
-https://www.youtube.com/watch?v=Tmq1UkL7xeU
+[RADIX SORT](https://www.youtube.com/watch?v=Tmq1UkL7xeU)
 
 Radix Sort is efficient because it doesn't rely on comparison between elements, making it suitable for our limited instruction set.
 Simple Sorting for Lists of 5 or Fewer Elements:
