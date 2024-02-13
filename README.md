@@ -25,7 +25,7 @@ For lists containing more than 5 elements, I implemented the Radix Sort algorith
 3. Collect: After distributing, collect the numbers back from the buckets, maintaining the order.
 4. Repeat: Repeat the process for the next significant digit until all digits are processed.
 
-[RADIX](https://github.com/thomaue/ft_push_swap/blob/main/binary-radix.svg)
+/binary-radix.svg
 
 ### radix visualisation :
 [HERE](https://www.youtube.com/watch?v=Tmq1UkL7xeU)
