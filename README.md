@@ -42,7 +42,6 @@ This repository contains my solution for the Push Swap project at 42. The object
 For lists containing 5 or fewer elements, I utilized simpler sorting algorithms. These algorithms, although less efficient for larger lists, are suitable for smaller sets due to their simplicity and low overhead.
 
 By employing Radix Sort for larger lists and simpler sorting techniques for smaller lists, I aimed to optimize the sorting process while adhering to the project's constraints.
-How to Use:
 
 ## WORKING ? 
 
