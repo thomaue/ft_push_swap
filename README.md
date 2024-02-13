@@ -38,6 +38,9 @@ By employing Radix Sort for larger lists and simpler sorting techniques for smal
 How to Use:
 
 
+
+
+
 To test the sorting functionality, simply compile the program and pass the list of integers as a parameter. The program will output the sorted list along with the sequence of instructions used.
 Usage:
 
