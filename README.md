@@ -5,14 +5,14 @@ Project Description:
 
 The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:
 
-    sa: swap the first two elements of the list A.
-    sb: swap the first two elements of the list B.
-    ra: rotate the list A, the first element becomes the last.
-    rb: rotate the list B, the first element becomes the last.
-    rra: reverse rotate the list A, the last element becomes the first.
-    rrb: reverse rotate the list B, the last element becomes the first.
-    pa: push the first element of list B to list A.
-    pb: push the first element of list A to list B.
+- sa: swap the first two elements of the list A.
+- sb: swap the first two elements of the list B.
+- ra: rotate the list A, the first element becomes the last.
+- rb: rotate the list B, the first element becomes the last.
+- rra: reverse rotate the list A, the last element becomes the first.
+- rrb: reverse rotate the list B, the last element becomes the first.
+- pa: push the first element of list B to list A.
+- pb: push the first element of list A to list B.
 
 The challenge lies in sorting the list using as few instructions as possible.
 Radix Sort for Lists Above 5:
@@ -44,6 +44,4 @@ Run the program with a list of integers:
 ```bash
 $ ./push_swap 4 2 7 1 3
 ```
-Acknowledgment:
 
-Special thanks to École 42 for providing this challenging project and the opportunity to explore different sorting algorithms under constraints.
