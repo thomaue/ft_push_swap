@@ -19,10 +19,10 @@ Radix Sort for Lists Above 5:
 
 For lists containing more than 5 elements, I implemented the Radix Sort algorithm to achieve efficient sorting. Radix Sort is a non-comparative sorting algorithm that sorts numbers by processing individual digits. Here's how it works:
 
-    Initialization: Create ten buckets (queues), each corresponding to a digit (0-9).
-    Sort by Least Significant Digit (LSD): Start with the least significant digit and distribute the numbers into the respective buckets based on this digit.
-    Collect: After distributing, collect the numbers back from the buckets, maintaining the order.
-    Repeat: Repeat the process for the next significant digit until all digits are processed.
+1.     Initialization: Create ten buckets (queues), each corresponding to a digit (0-9).
+2.     Sort by Least Significant Digit (LSD): Start with the least significant digit and distribute the numbers into the respective buckets based on this digit.
+3.     Collect: After distributing, collect the numbers back from the buckets, maintaining the order.
+4.     Repeat: Repeat the process for the next significant digit until all digits are processed.
 
 Radix Sort is efficient because it doesn't rely on comparison between elements, making it suitable for our limited instruction set.
 Simple Sorting for Lists of 5 or Fewer Elements:
