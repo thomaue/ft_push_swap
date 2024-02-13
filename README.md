@@ -5,7 +5,6 @@ Project Description:
 
 
 
-
 __The Push Swap project challenges us to sort a list of integers with limited resources. We're only allowed to use a predefined set of instructions:__
 
 * `sa`: swap the first two elements of the list A.
