@@ -6,7 +6,7 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 14:27:48 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:30:48 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/14 13:23:45 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 //! Intervertit les 2 premiers éléments au sommet de la pile.
 // Ne fait rien s’il n’y en a qu’un ou aucun.
 
-void swap_top(element **first)
+void	swap_top(t_element **first)
 {
-	element *first_dup;
-	element *second_dup;
-	element *temp;
+	t_element	*first_dup;
+	t_element	*second_dup;
+	t_element	*temp;
 
 	temp = NULL;
 	first_dup = NULL;
 	second_dup = NULL;
-
 	if (*first && (*first)->next)
 	{
 		first_dup = (*first);
@@ -42,14 +41,14 @@ void swap_top(element **first)
 //! push d'une stack a l'autre
 // Ne fait rien s’il n’y en a qu’un ou aucun.
 
-void push_to(element **first_src, element **first_dst)
+void	push_to(t_element **first_src, t_element **first_dst)
 {
-	element *dup;
-	element *temp;
+	t_element	*dup;
+	t_element	*temp;
 
 	temp = NULL;
 	if (!(*first_src))
-		return;
+		return ;
 	dup = (*first_src);
 	if ((*first_src)->next)
 		(*first_src) = (*first_src)->next;
@@ -69,15 +68,15 @@ void push_to(element **first_src, element **first_dst)
 //! rotate toute la pile le premier devient le dernier
 // Ne fait rien s’il n’y en a qu’un ou aucun.
 
-void rotate(element **first)
+void	rotate(t_element **first)
 {
-	element *current;
-	element *dup;
+	t_element	*current;
+	t_element	*dup;
 
 	current = NULL;
 	dup = NULL;
 	if (!(*first) || !(*first)->next)
-		return;
+		return ;
 	current = (*first);
 	dup = (*first);
 	(*first) = (*first)->next;
@@ -92,16 +91,16 @@ void rotate(element **first)
 //! rotate toute la pile le dernier devient le premier
 // Ne fait rien s’il n’y en a qu’un ou aucun.
 
-void derotate(element **first)
+void	derotate(t_element **first)
 {
-	element *current;
-	element *dup;
+	t_element	*current;
+	t_element	*dup;
 
 	current = NULL;
 	dup = NULL;
 	current = (*first);
 	if (!(*first) || !(*first)->next)
-		return;
+		return ;
 	while (current->next)
 		current = current->next;
 	dup = current;

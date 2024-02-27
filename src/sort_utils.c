@@ -6,18 +6,18 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 13:38:46 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:31:00 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/19 11:55:28 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-unsigned int last_on(unsigned char index)
+unsigned int	last_on(unsigned int index)
 {
-	unsigned int i;
-	unsigned char bit;
+	unsigned int	i;
+	unsigned char	bit;
 
-	i = 8;
+	i = 31;
 	while (i--)
 	{
 		bit = (index >> i & 1) + '0';
@@ -27,10 +27,10 @@ unsigned int last_on(unsigned char index)
 	return (0);
 }
 
-unsigned int biggest_bit(element *first)
+unsigned long	biggest_bit(t_element *first)
 {
-	unsigned int max_bit;
-	element *current;
+	unsigned long	max_bit;
+	t_element		*current;
 
 	max_bit = 0;
 	current = first;
@@ -43,9 +43,11 @@ unsigned int biggest_bit(element *first)
 	return (max_bit);
 }
 
-int is_last_little(element **first_a, element **first_b, element *current, unsigned long sorted_index)
+int	is_last_little(t_element **first_a, t_element **first_b, t_element *current,
+		unsigned long sorted_index)
 {
-	if (current->index == list_size(*first_a) - 1 && current->sorted_index == sorted_index)
+	if (current->index == list_size(*first_a) - 1
+		&& current->sorted_index == sorted_index)
 	{
 		rra(first_a);
 		pb(first_b, first_a);
@@ -54,22 +56,22 @@ int is_last_little(element **first_a, element **first_b, element *current, unsig
 	return (0);
 }
 
-void push_lowest(element **first_a, element **first_b, unsigned long sorted_index)
+void	push_lowest(t_element **first_a, t_element **first_b,
+		unsigned long sorted_index)
 {
-	element *current;
-	unsigned long min;
-	unsigned long index;
+	t_element		*current;
+	unsigned long	min;
+	unsigned long	index;
 
 	current = (*first_a);
 	min = current->sorted_index;
 	index = 0;
-	// printf("[min : %ld]\n", min);
 	while (current)
 	{
 		if (current->sorted_index < min)
 			min = current->sorted_index;
 		if (is_last_little(first_a, first_b, current, sorted_index))
-			return;
+			return ;
 		current = current->next;
 	}
 	while (index++ < list_size(*first_a))
@@ -77,7 +79,7 @@ void push_lowest(element **first_a, element **first_b, unsigned long sorted_inde
 		if ((*first_a)->sorted_index == min)
 		{
 			pb(first_b, first_a);
-			return;
+			return ;
 		}
 		ra(first_a);
 	}

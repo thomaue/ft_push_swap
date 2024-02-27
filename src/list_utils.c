@@ -6,47 +6,55 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:37:02 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:30:43 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/19 11:11:01 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-element *make_first(char **tab)
+t_element	*make_first(char **tab)
 {
-	element *first_a;
+	t_element	*first_a;
 
 	first_a = NULL;
-	first_a = (element *)malloc(sizeof(element));
+	first_a = (t_element *)malloc(sizeof(t_element));
 	if (!first_a)
 		return (NULL);
 	first_a->prev = NULL;
 	first_a->next = NULL;
 	first_a->index = 0;
-	first_a->value = ft_atoi(tab[0]);
+	if (ft_atoi(tab[0], &first_a->value))
+	{
+		free(first_a);
+		return (NULL);
+	}
 	return (first_a);
 }
 
-element *make_next(char **tab, element *current, unsigned int x)
+t_element	*make_next(char **tab, t_element *current, unsigned int x)
 {
-	element *next;
+	t_element	*next;
 
-	next = (element *)malloc(sizeof(element));
+	next = (t_element *)malloc(sizeof(t_element));
 	if (!next)
 		return (NULL);
 	next->prev = current;
 	next->next = NULL;
 	next->index = x;
-	next->value = ft_atoi(tab[x]);
+	if (ft_atoi(tab[x], &next->value) == true)
+	{
+		free(next);
+		return (NULL);
+	}
 	return (next);
 }
 
-element *core_list(char **tab)
+t_element	*core_list(char **tab)
 {
-	element *first_a;
-	element *current;
-	element *next;
-	unsigned int x;
+	t_element		*first_a;
+	t_element		*current;
+	t_element		*next;
+	unsigned int	x;
 
 	first_a = make_first(tab);
 	if (!first_a)
@@ -57,7 +65,10 @@ element *core_list(char **tab)
 	{
 		next = make_next(tab, current, x);
 		if (!next)
+		{
+			free_list(first_a);
 			return (NULL);
+		}
 		current->next = next;
 		current = next;
 		x++;
@@ -65,23 +76,22 @@ element *core_list(char **tab)
 	return (first_a);
 }
 
-element *make_list(char **tab)
+t_element	*make_list(char **tab)
 {
-	element *first_a;
+	t_element	*first_a;
 
+	first_a = NULL;
 	if (!tab)
 		return (NULL);
 	else if (!tab[0])
 	{
 		free(tab);
-		write(1, "[NOT ENOUGH NUM]\n", 18);
 		return (NULL);
 	}
 	first_a = core_list(tab);
 	if (!first_a)
 	{
-		free(tab);
-		write(1, "[MALLOC FAILED]\n", 17);
+		free_tab(tab);
 		return (NULL);
 	}
 	free_tab(tab);
@@ -89,10 +99,10 @@ element *make_list(char **tab)
 	return (first_a);
 }
 
-unsigned long list_size(element *first)
+unsigned long	list_size(t_element *first)
 {
-	unsigned long size;
-	element *current;
+	unsigned long	size;
+	t_element		*current;
 
 	if (!first)
 		return (0);
@@ -104,9 +114,4 @@ unsigned long list_size(element *first)
 		size++;
 	}
 	return (size);
-}
-
-int ok_char(char c)
-{
-	return (c == '-' || c == '+' || (c >= '0' && c <= '9'));
 }

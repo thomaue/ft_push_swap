@@ -6,17 +6,17 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 18:32:49 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:31:06 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/14 23:13:56 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	size_t len_s;
-	char *str;
-	char *ptr;
+	size_t	len_s;
+	char	*str;
+	char	*ptr;
 
 	len_s = ft_strlen(s);
 	str = (char *)malloc(sizeof(char) * (len_s + 1));
@@ -29,15 +29,15 @@ char *ft_strdup(const char *s)
 	return (ptr);
 }
 
-int is_c(char c_s, char c)
+int	is_c(char c_s, char c)
 {
 	return (c_s == c);
 }
 
-unsigned int count_word(char const *s, char c)
+unsigned int	count_word(char const *s, char c)
 {
-	size_t i;
-	unsigned int count;
+	size_t			i;
+	unsigned int	count;
 
 	i = 0;
 	count = 0;
@@ -52,10 +52,10 @@ unsigned int count_word(char const *s, char c)
 	return (count);
 }
 
-char *mal_str(char const *s, char c, int *ptr)
+char	*mal_str(char const *s, char c, int *ptr)
 {
-	size_t len;
-	char *dup;
+	size_t	len;
+	char	*dup;
 
 	len = 0;
 	while (is_c(s[*ptr], c) && s[*ptr])
@@ -80,12 +80,12 @@ char *mal_str(char const *s, char c, int *ptr)
 	return (dup);
 }
 
-char **tab_tab_split(const char *s, char c)
+char	**tab_tab_split(const char *s, char c)
 {
-	char **tab;
-	int i;
-	int pos;
-	int count;
+	char	**tab;
+	int		i;
+	int		pos;
+	int		count;
 
 	i = 0;
 	pos = 0;
@@ -97,6 +97,11 @@ char **tab_tab_split(const char *s, char c)
 	{
 		pos = 0;
 		tab[i] = mal_str(s, c, &pos);
+		if (!tab[i])
+		{
+			free(tab);
+			return (0);
+		}
 		s += pos;
 		i++;
 	}

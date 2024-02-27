@@ -6,16 +6,19 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:27:21 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:30:45 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/19 12:04:23 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-void push_swap(char **tab)
+//! to display lists simply put this function line 34: :35
+// display_all(first_a, first_b);
+
+void	push_swap(char **tab)
 {
-	element *first_a;
-	element *first_b;
+	t_element	*first_a;
+	t_element	*first_b;
 
 	first_a = NULL;
 	first_b = NULL;
@@ -29,15 +32,14 @@ void push_swap(char **tab)
 			medium_sort(&first_a, &first_b);
 		else
 			little_sort(&first_a);
-
-		display_all(first_a, first_b);
 		free_all(first_a, first_b);
 	}
 	else
-		write(1, "[FAILURE]\n", 11);
+		write(2, "Error\n", 7);
 }
+// display_all(first_a, first_b);
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc >= 2)
 	{
@@ -47,7 +49,9 @@ int main(int argc, char **argv)
 			push_swap(tab_argv(argc, argv));
 	}
 	else
-		printf("\t[NO ARGS]\n\n%s ''... ... ...''\n%s   ... ... ...\n\n",
-			   argv[0], argv[0]);
+	{
+		write(2, "\t[NO ARGS]\n\n./push_swap ''... ... ...''\n", 41);
+		write(2, "./push_swap   ... ... ...\n\n", 28);
+	}
 	return (0);
 }

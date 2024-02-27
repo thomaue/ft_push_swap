@@ -6,15 +6,15 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 18:34:28 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:31:09 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/15 14:18:27 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-unsigned long len_tab(char **tab)
+unsigned long	len_tab(char **tab)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	while (tab[x])
@@ -22,21 +22,23 @@ unsigned long len_tab(char **tab)
 	return (x);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **tab_split;
+	char	**tab_split;
 
 	if (!s)
 		return (NULL);
 	tab_split = tab_tab_split(s, c);
+	if (!tab_split)
+		return (NULL);
 	return (tab_split);
 }
 
-char **tab_argv(int argc, char **argv)
+char	**tab_argv(int argc, char **argv)
 {
-	int i;
-	int i2;
-	char **tab;
+	int		i;
+	int		i2;
+	char	**tab;
 
 	i = 0;
 	i2 = 1;
@@ -46,6 +48,11 @@ char **tab_argv(int argc, char **argv)
 	while (i < argc - 1)
 	{
 		tab[i] = ft_strdup(argv[i2]);
+		if (!tab[i])
+		{	
+			free_tab(tab);
+			return (NULL);
+		}
 		i++;
 		i2++;
 	}

@@ -6,13 +6,13 @@
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 13:27:41 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:18:45 by tauer            ###   ########.fr       */
+/*   Updated: 2024/02/14 13:24:06 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-int first_littlest(element **first, unsigned long little, unsigned long big)
+int	first_littlest(t_element **first, unsigned long little, unsigned long big)
 {
 	if ((*first)->sorted_index == little)
 	{
@@ -28,7 +28,7 @@ int first_littlest(element **first, unsigned long little, unsigned long big)
 	return (1);
 }
 
-int first_medium(element **first, unsigned long medium, unsigned long big)
+int	first_medium(t_element **first, unsigned long medium, unsigned long big)
 {
 	if ((*first)->sorted_index == medium)
 	{
@@ -41,7 +41,7 @@ int first_medium(element **first, unsigned long medium, unsigned long big)
 	return (1);
 }
 
-int first_biggest(element **first, unsigned long medium, unsigned long big)
+int	first_biggest(t_element **first, unsigned long medium, unsigned long big)
 {
 	if ((*first)->sorted_index == big)
 	{

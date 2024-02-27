@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tauer <tauer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 14:12:14 by tauer             #+#    #+#             */
-/*   Updated: 2024/02/13 18:30:40 by tauer            ###   ########.fr       */
+/*   Created: 2024/02/14 13:26:57 by tauer             #+#    #+#             */
+/*   Updated: 2024/02/14 13:27:08 by tauer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-void free_list(element *first)
-{
-	element *current;
-	element *temp;
+//? fonctions swap
 
-	if (!first)
-		return;
-	current = first;
-	while (current)
-	{
-		temp = current->next;
-		free(current);
-		current = temp;
-	}
+void	sb(t_element **first)
+{
+	write(1, "sb\n", 3);
+	swap_top(first);
 }
 
-void free_all(element *first_a, element *first_b)
+void	sa(t_element **first)
 {
-	free_list(first_a);
-	free_list(first_b);
+	write(1, "sa\n", 3);
+	swap_top(first);
 }
 
-void free_tab(char **tab)
+void	ss(t_element **first_a, t_element **first_b)
 {
-	int x;
-
-	x = 0;
-	while (tab[x])
-		free(tab[x++]);
-	free(tab);
+	sa(first_a);
+	sb(first_b);
 }

@@ -6,25 +6,26 @@
 #    By: tauer <tauer@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 17:59:50 by tauer             #+#    #+#              #
-#    Updated: 2024/02/13 18:15:09 by tauer            ###   ########.fr        #
+#    Updated: 2024/02/19 12:08:48 by tauer            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC_DIR		=	src
 BUILD_DIR	=	build
 NAME		=	push_swap
-CFLAG		=	-Wall -Wextra -Werror -I./header 
-
+CFLAG		=	-Wall -Wextra -Werror -I./header
 
 SRC			=	$(SRC_DIR)/checker.c\
-				$(SRC_DIR)/clean_moves.c\
+				$(SRC_DIR)/push.c\
+				$(SRC_DIR)/reverse_rotate.c\
+				$(SRC_DIR)/rotate.c\
+				$(SRC_DIR)/swap.c\
 				$(SRC_DIR)/edit_list.c\
 				$(SRC_DIR)/free.c\
 				$(SRC_DIR)/list_utils.c\
 				$(SRC_DIR)/main.c\
 				$(SRC_DIR)/move.c\
 				$(SRC_DIR)/print_utils.c\
-				$(SRC_DIR)/print.c\
 				$(SRC_DIR)/sort_utils.c\
 				$(SRC_DIR)/sort.c\
 				$(SRC_DIR)/split_utils.c\
@@ -32,6 +33,7 @@ SRC			=	$(SRC_DIR)/checker.c\
 				$(SRC_DIR)/three_digits_move.c\
 				$(SRC_DIR)/three_digits_set.c\
 				$(SRC_DIR)/utils.c\
+				# $(SRC_DIR)/print.c\
 			
 CC			=	cc 
 
